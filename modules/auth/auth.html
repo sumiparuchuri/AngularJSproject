@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"><h3>Create New User</h3>
+    <div class="alert alert-warning" role="alert" ng-if="createUserError">
+              {{createUserError}}
+            </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form ng-submit="createNewUser()">
+          <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="frm.email" required>
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" ng-model="frm.password" required>
+          </div>
+          <div class="form-group">
+              <label for="confirm_password">Confirm Password</label>
+              <input type="password" required class="form-control" id="confirm_password" placeholder="Confirm Password" ng-model="frm.confirm_password">
+          </div>
+           <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter username" ng-model="frm.username" required>
+          </div>
+          <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="form-control" id="fullname" placeholder="Enter fullname" ng-model="frm.fullname" required>
+          </div>
+
+          <div class="form-group">
+              <label for="age">Age</label>
+              <input type="text" class="form-control" id="age" placeholder="Enter Age" ng-model="frm.age">
+          </div>
+
+
+          <button type="submit" class="btn btn-primary form-control">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

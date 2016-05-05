@@ -1,0 +1,16 @@
+
+
+<div class="row" ng-if="totalRows > 0">
+  <div class="col-md-12">
+    <hr>
+    <p class="text-center"> Records <strong>{{startRowsPlus}}</strong> to <strong>{{minRows}}</strong> of <strong>{{totalRows}}</strong></p>
+    <nav>
+      <ul class="pager">
+        <li ng-if="pageNum > 0"><a href="{{urlPrefix}}/0{{urlSuffix}}">First</a></li>
+        <li ng-if="pageNum > 0"><a href="{{urlPrefix}}/{{prevPage}}{{urlSuffix}}">Previous</a></li>
+        <li ng-if="pageNum < totalPages"><a href="{{urlPrefix}}/{{nextPage}}{{urlSuffix}}">Next</a></li>
+        <li ng-if="pageNum < totalPages"><a href="{{urlPrefix}}/{{totalPages}}{{urlSuffix}}">Last</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

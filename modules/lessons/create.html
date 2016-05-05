@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Enter Main Details</h1>
+      
+      <form ng-submit="submitCreateForm()">
+        <div class="form-group">
+            <label for="location">Location *</label>
+            <input type="text" class="form-control addressBox" id="location" ng-model="location" placeholder="Enter Location" ng-autocomplete options="mapOptions" details="details" required>
+        </div>
+           <div class="form-group">
+            <label for="title">Posting Title *</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter posting title" ng-model="frm.title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Posting Body *</label>
+            <textarea class="form-control" id="description" placeholder="Enter posting body" ng-model="frm.description" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="subjects">Subjects (Comma separated tags for subjects)</label>
+            <input type="text" class="form-control" id="tags" placeholder="Enter search tags" ng-model="frm.tags">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender: </label>
+            <input type="radio" ng-model="frm.gender" value="Male"> Male 
+            <input type="radio" ng-model="frm.gender" value="Female"> Female
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+      
+    </div>
+  </div>
+</div>

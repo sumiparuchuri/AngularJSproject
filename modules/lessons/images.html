@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Enter Image URLS</h1>
+      <form ng-submit="addImage()">
+        <div class="form-group">
+            <label for="imageUrls">Image URL:</label>
+            <input type="text" class="form-control" id="imageUrls" placeholder="Enter image url" ng-model="frm.image">
+        </div>
+        <button type="submit" class="btn btn-default">Add Image</button>
+        <a href="#/lessons" class="btn btn-default">Done</a>
+        
+      </form><!-- ending form -->
+      <br>
+      <div class="row" ng-if="images">
+        <div class="col-md-3" ng-repeat="img in images">
+          <img ng-src="{{img}}" class="img-responsive img-thumbnail">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

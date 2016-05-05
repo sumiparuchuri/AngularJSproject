@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Enter Main Details</h1>
+      
+      <form ng-submit="submitCreateForm()">
+        <div class="form-group">
+            <label for="location">Location *</label>
+            <input type="text" class="form-control addressBox" id="location" ng-model="location" placeholder="Enter Location" ng-autocomplete options="mapOptions" details="details" required>
+        </div>
+           <div class="form-group">
+            <label for="title">Posting Title *</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter posting title" ng-model="frm.title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Posting Body *</label>
+            <textarea class="form-control" id="description" placeholder="Enter posting body" ng-model="frm.description" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="subjects">Subjects (Comma separated tags for subjects)</label>
+            <input type="text" class="form-control" id="tags" placeholder="Enter search tags" ng-model="frm.tags">
+        </div>
+        <div class="form-group">
+            <label for="classstudying">Class Studying *</label>
+            <input type="text" class="form-control" id="classstudying" placeholder="Enter the class which you are studying" ng-model="frm.classstudying" required>
+        </div>  
+        <div class="form-group">
+            <label for="age">Age *</label>
+            <input type="text" class="form-control" id="age" placeholder="Enter Age" ng-model="frm.age" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter E-Mail ID" ng-model="frm.email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" ng-model="frm.phone" required>
+        </div>  
+          
+        <div class="form-group">
+            <label for="gender">Gender: </label>
+            <input type="radio" ng-model="frm.gender" value="Male"> Male 
+            <input type="radio" ng-model="frm.gender" value="Female"> Female
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+      
+    </div>
+  </div>
+</div>
